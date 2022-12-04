@@ -83,7 +83,7 @@ $('#myTabs a').click(function(e) {
 		function dd() {
 			var a = music_table.length;
 			var b = Math.floor(Math.random() * a);
-			copyText("点歌 " + music_table1[b].歌名 + " " + music_table1[b].歌手)
+			copyText(b)
 			tc("点歌 " + music_table1[b].歌名 + " " + music_table1[b].歌手)
 		}
 
