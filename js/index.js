@@ -63,13 +63,13 @@ $('#myTabs a').click(function(e) {
 		}
 
 		function copyText(text) {
-			var tex = text;
+			var tex = "点歌 "+music_table1[text].歌名;
 			var input = document.getElementById("cvin");
-			input.value = text;
+			input.value = tex;
 			input.select(); 
 			document.execCommand("copy"); 
 			
-			tc(text)
+			tc(tex)
 		}
 
 
