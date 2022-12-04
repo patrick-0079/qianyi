@@ -9,9 +9,9 @@
 	
 				for (var i = 0; i < music_table1.length; i++) {//排序
 					document.write('<tr>');
-					document.write("<td onmousedown=\copyText('" +"点歌&nbsp;"+music_table1[i].歌名+"&nbsp;"+music_table1[i].歌手 +"')\>"+music_table1[i].歌名+"</td>");
-					document.write("<td onmousedown=\copyText('"+"点歌&nbsp;"+music_table1[i].歌名+"&nbsp;"+music_table1[i].歌手 +"')\>"+music_table1[i].歌手+"</td>");
-					document.write("<td onmousedown=\copyText('"+"点歌&nbsp;"+music_table1[i].歌名+"&nbsp;"+music_table1[i].歌手 +"')\>"+music_table1[i].语种+"</td>");
+					document.write("<td onmousedown=\copyText('"+i+"')\>"+music_table1[i].歌名+"</td>");
+					document.write("<td onmousedown=\copyText('"+i+"')\>"+music_table1[i].歌手+"</td>");
+					document.write("<td onmousedown=\copyText('"+i+"')\>"+music_table1[i].语种+"</td>");
 					document.write('</tr>');
 				}
 				
