@@ -63,7 +63,7 @@ $('#myTabs a').click(function(e) {
 		}
 
 		function copyText(text) {
-			var tex = "点歌 "+music_table1[text].歌名;
+			var tex = "点歌 "+music_table1[text].歌名+'\xa0'+music_table1[text].歌手;
 			var input = document.getElementById("cvin");
 			input.value = tex;
 			input.select(); 
