@@ -51,3 +51,9 @@
 		    
 		}
 		
+		a:visited {
+			color: brown;
+		  }
+		  a:link {
+  			color: brown;
+		}
