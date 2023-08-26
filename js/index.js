@@ -2,6 +2,77 @@ $('#myTabs a').click(function(e) {
 			e.preventDefault()
 			$(this).tab('show')
 		})
+
+
+
+
+		$('#demo').change(function() {
+			console.log("dd");
+			var searchText = $(this).val();
+			var searchSelect1 = $('#demomo').val();
+			var $searchTr = "";
+			//  if (searchText != "") {
+				$('#search tbody').html("");
+			
+				if (searchSelect1 == "zh") {
+					console.log("dd1");
+					open("emit.html", "_search"); 
+		 		} else {
+					$searchTr = $('#myTabContent').find('td:contains(' + searchText + ')').parent();
+				}
+				$searchTr.each(function(i, e) {
+					$('#search tbody').append($(e).clone(true));
+				});
+			
+				if ($searchTr.length <= 0) {
+					$('#search tbody').html(
+						'<td colspan = "7"><div class="alert alert-warning" role="alert">主包还不会这首歌捏</div></td>')
+				}
+				$('#search-tab').tab('show');
+
+			}).keyup(function() {
+				$(this).change();
+			})
+		
+
+
+		$('#searchLau').change(function() {
+			console.log("dd");
+			var searchText = $(this).val();
+			var searchSelect1 = $('#searchLan').val();
+			var $searchTr = "";
+			//  if (searchText != "") {
+				$('#search tbody').html("");
+			
+				if (searchSelect1 == "zh") {
+					console.log("dd1");
+					$searchTr = $('#myTabContent').find('td:nth-child(3):contains(' + "国语" + ')').parent(); 
+		 		} else if (searchSelect1 == "mn") {
+					$searchTr = $('#myTabContent').find('td:nth-child(3):contains(' + "闽南语" + ')').parent();
+				} else if (searchSelect1 == "ja") {
+					$searchTr = $('#myTabContent').find('td:nth-child(3	):contains(' + "日语" + ')').parent();
+				} else if (searchSelect1 == "yy") {
+					$searchTr = $('#myTabContent').find('td:nth-child(3	):contains(' + "粤语" + ')').parent();
+				}				 else {
+					$searchTr = $('#myTabContent').find('td:contains(' + searchText + ')').parent();
+				}
+				$searchTr.each(function(i, e) {
+					$('#search tbody').append($(e).clone(true));
+				});
+			
+				if ($searchTr.length <= 0) {
+					$('#search tbody').html(
+						'<td colspan = "7"><div class="alert alert-warning" role="alert">主包还不会这首歌捏</div></td>')
+				}
+				$('#search-tab').tab('show');
+
+			}).keyup(function() {
+				$(this).change();
+			})
+	
+
+
+
 		$('#searchText').change(function() {
 			console.log("dd");
 			var searchText = $(this).val();
